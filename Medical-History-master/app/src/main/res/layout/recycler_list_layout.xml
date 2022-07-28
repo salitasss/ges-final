@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.example.practice.ui.home.HomeViewModel" />
+        <variable
+            name="user"
+            type="com.example.practice.models.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/visible_full_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_date"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_weight"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_hours"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_colon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/item_minutes"
+                android:layout_width="22dp"
+                android:layout_height="19dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_bg"
+                android:layout_width="42dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_systolic"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/item_diastolic"
+                android:layout_width="25dp"
+                android:layout_height="19dp"
+                android:gravity="start"
+                android:maxLines="1"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/item_med1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med7"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med8"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med9"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_med10"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="visible"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_comment"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

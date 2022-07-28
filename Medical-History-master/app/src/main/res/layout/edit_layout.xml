@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:theme="@style/Theme.AppCompat.DayNight.Dialog"
+    tools:context="ui.home.Edit">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/nav_header_vertical_spacing"
+                android:paddingEnd="@dimen/nav_header_vertical_spacing">
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/EditButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="7"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/green"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:text="Save Changes" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="right"
+                        android:text="Date"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_date"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_span="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="date"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/view_med1"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:gravity="right"
+                        android:hint="med 1"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med1"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/view_med6"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:gravity="right"
+                        android:hint="med 6"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med6"
+                        android:layout_width="25dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="7"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginTop="0dp"
+                        android:gravity="right"
+                        android:text="Weight"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_weight"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_span="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="3"
+                        android:nextFocusDown="@id/enter_hours"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/view_med2"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:gravity="right"
+                        android:hint="med 2"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med2"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/view_med7"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:gravity="right"
+                        android:hint="med 7"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med7"
+                        android:layout_height="wrap_content"
+                        android:layout_column="7"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="right"
+                        android:text="Fast time"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_hours"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:gravity="end"
+                        android:fontFamily="casual"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:nextFocusRight="@id/enter_minutes"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/enter_colon"
+                        android:layout_column="2"
+                        android:gravity="center"
+                        android:text=":"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_minutes"
+                        android:layout_column="3"
+                        android:fontFamily="casual"
+                        android:gravity="start"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:nextFocusDown="@id/enter_bg"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/view_med3"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:gravity="right"
+                        android:hint="med 3"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med3"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/view_med8"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:gravity="right"
+                        android:hint="med 8"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med8"
+                        android:layout_height="wrap_content"
+                        android:layout_column="7"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="right"
+                        android:text="BG"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_bg"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_span="3"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:nextFocusDown="@id/enter_systolic"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/view_med4"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:gravity="right"
+                        android:hint="med 4"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med4"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/view_med9"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:gravity="right"
+                        android:hint="med 9"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med9"
+                        android:layout_height="wrap_content"
+                        android:layout_column="7"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:gravity="right"
+                        android:text="BP"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_systolic"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:fontFamily="casual"
+                        android:gravity="end"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:nextFocusRight="@id/enter_diastolic"
+                        android:textColorHint="#AFAEAE"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/enter_slash"
+                        android:layout_column="2"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/enter_diastolic"
+                        android:layout_width="30dp"
+                        android:layout_column="3"
+                        android:fontFamily="casual"
+                        android:gravity="start"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:textColorHint="#AFAEAE"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/view_med5"
+                        android:layout_height="wrap_content"
+                        android:layout_column="4"
+                        android:gravity="right"
+                        android:hint="med 5"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med5"
+                        android:layout_height="wrap_content"
+                        android:layout_column="5"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/view_med10"
+                        android:layout_height="wrap_content"
+                        android:layout_column="6"
+                        android:gravity="right"
+                        android:hint="med 10"
+                        android:paddingStart="@dimen/nav_header_vertical_spacing"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/enter_med10"
+                        android:layout_height="wrap_content"
+                        android:layout_column="7"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:inputType="datetime"
+                        android:maxLength="4"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/enter_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="7"
+                        android:layout_weight="1"
+                        android:fontFamily="casual"
+                        android:hint="Enter comment"
+                        android:inputType="textCapSentences"
+                        android:maxLength="40"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/DeleteButton"
+                        android:layout_span="7"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/red"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:text="Delete Record" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </HorizontalScrollView>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.practice.ui.home.Add"
+        android:label="Record stats"
+        tools:layout="@layout/add_layout" >
+        <action
+            android:id="@+id/addFragment_to_homeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_addFragment_to_nav_medications"
+            app:destination="@id/nav_medications" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.practice.ui.home.HomeFragment"
+        android:label="Daily Stats"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/homeFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.practice.ui.home.Edit"
+        android:label="Change or delete these stats"
+        tools:layout="@layout/edit_layout" >
+        <action
+            android:id="@+id/editFragment_to_homeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_editFragment_to_nav_medications"
+            app:destination="@id/nav_medications" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.practice.models.User" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_medications"
+        android:name="com.example.practice.ui.medications.Medications"
+        android:label="@string/menu_medications"
+        tools:layout="@layout/fragment_medications" />
+</navigation>
