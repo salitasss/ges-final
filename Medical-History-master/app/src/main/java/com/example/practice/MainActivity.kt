@@ -1,14 +1,22 @@
 package com.example.practice
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.children
+import androidx.core.view.get
+import androidx.core.view.size
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -19,6 +27,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.practice.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +44,17 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
+        val item = binding.navView.menu.getItem(2)
+        item.setOnMenuItemClickListener {
+            logout()
+            return@setOnMenuItemClickListener true
+        }
+
+        val s = binding.navView.getHeaderView(0) as LinearLayout
+        val emailTV = s.findViewById<TextView>(R.id.emailTextView)
+        emailTV.text = Firebase.auth.currentUser?.email!!
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -45,6 +66,34 @@ class MainActivity : AppCompatActivity() {
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    private fun logout() {
+
+        val alertDialogDelete: AlertDialog? = let {
+            val builder = AlertDialog.Builder(it)
+            builder.apply {
+                setPositiveButton("Si") { dialog, _ ->
+
+                    Firebase.auth.signOut()
+                    dialog.dismiss()
+                    val intent = Intent(it, SignInActivity::class.java)
+                    startActivity(intent)
+                    this@MainActivity.finish()
+
+
+                }
+
+                setNegativeButton("No") { dialog, id ->
+                    dialog.dismiss()
+                }
+
+                setTitle("Do you want to log out?")
+            }
+            builder.create()
+        }
+        alertDialogDelete?.show()
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

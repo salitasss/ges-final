@@ -12,5 +12,9 @@
             android:id="@+id/nav_medications"
             android:icon="@drawable/ic_do_not_disturb_black_24dp"
             android:title="@string/menu_medications" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_do_not_disturb_black_24dp"
+            android:title="Logout" />
     </group>
 </menu>

@@ -66,39 +66,21 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/bookButton"
-            android:layout_width="216dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#4CAF59"
-            android:text="Book/Check In"
-            android:textColor="@color/common_google_signin_btn_text_dark_default" />
-
         <Space
             android:layout_width="match_parent"
             android:layout_height="29dp" />
-
-        <Button
-            android:id="@+id/appointmentBtn"
-            android:layout_width="216dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#4CAF59"
-            android:text="View Appointments"
-            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
         <Button
-            android:id="@+id/signoutButton"
+            android:id="@+id/getStartedButton"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#9E737B"
-            android:text="Sign Out"
+            android:text="Get Started"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <Space

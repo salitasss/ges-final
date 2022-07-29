@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="onClick"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -40,7 +39,7 @@
                 android:layout_height="27dp" />
 
             <EditText
-                android:id="@+id/addressField2"
+                android:id="@+id/nameField2"
                 android:layout_width="268dp"
                 android:layout_height="47dp"
                 android:layout_gravity="center"
@@ -70,12 +69,13 @@
                 android:layout_height="17dp" />
 
             <EditText
-                android:id="@+id/usernameField2"
+                android:id="@+id/emailField2"
                 android:layout_width="264dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:ems="10"
-                android:hint="(Please enter a username)"
+                android:inputType="textEmailAddress"
+                android:hint="(Please enter a email)"
                 android:singleLine="true" />
 
             <TextView
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="Username"
+                android:text="Email"
                 android:textColor="#000000" />
 
             <Space
@@ -141,6 +141,7 @@
                     android:gravity="center"
                     android:text="Employee"
                     android:textSize="18sp" />
+
             </RadioGroup>
 
             <Space
@@ -148,6 +149,13 @@
                 android:layout_height="38dp" />
 
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/createButton"
@@ -163,14 +171,16 @@
             android:layout_height="23dp"
             android:layout_weight="0." />
 
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="216dp"
+        <TextView
+            android:id="@+id/alreadyTextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#9E737B"
-            android:text="Main Menu"
-            android:textColor="#FFF" />
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="16dp"
+            android:text="I already have an account"
+            android:clickable="true" />
 
         <Space
             android:layout_width="match_parent"

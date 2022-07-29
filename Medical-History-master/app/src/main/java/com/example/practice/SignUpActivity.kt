@@ -1,37 +1,140 @@
 package com.example.practice
 
-import com.google.firebase.database.FirebaseDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.content.Intent
-
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
+import android.util.Patterns
 import android.view.View
+
 import android.widget.*
+import com.example.practice.databinding.ActivitySignUpBinding
+import com.example.practice.model.User
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
+import com.google.firebase.ktx.Firebase
 import java.util.ArrayList
 import java.util.HashSet
 
-class SignUp : AppCompatActivity(), View.OnClickListener {
+class SignUpActivity : AppCompatActivity() {
     private var usernamesUsed: HashSet<String?>? = null
     private var users: ArrayList<DataBaseUser?>? = null
     private var services: ArrayList<DataBaseService?>? = null
+
+    private lateinit var auth: FirebaseAuth
+
+    private lateinit var email: EditText
+    private lateinit var password: EditText
+    private lateinit var name: EditText
+    private lateinit var progressBar: ProgressBar
+    private lateinit var createBtn: Button
+
+    private lateinit var binding: ActivitySignUpBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
-        val button1 = findViewById<Button>(R.id.createButton)
+
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        auth = Firebase.auth
+
+        binding.alreadyTextView.setOnClickListener {
+            this@SignUpActivity.finish()
+        }
+
+        name = binding.nameField2
+        email = binding.emailField2
+        password = binding.passwordField2
+
+        progressBar = binding.progressBar
+
+        createBtn = binding.createButton
+        createBtn.setOnClickListener {
+
+            if(!isValidForm()) return@setOnClickListener
+
+            createBtn.visibility = View.GONE
+            progressBar.visibility = View.VISIBLE
+
+            val userN = User(name = name.text.toString(), email = email.text.toString(), role = "patient", timestamp = ServerValue.TIMESTAMP, status = "A")
+            register(userN, password = password.text.toString())
+        }
+        /*val button1 = findViewById<Button>(R.id.createButton)
         val button2 = findViewById<Button>(R.id.backButton)
         button1.setOnClickListener(this)
-        button2.setOnClickListener(this)
-        usernamesUsed = HashSet()
+        button2.setOnClickListener(this)*/
+        /*usernamesUsed = HashSet()
         users = ArrayList()
         services = ArrayList()
         updateUsers()
-        updateServices()
+        updateServices()*/
     }
 
-    fun updateUsers() {
+    private fun register(userN: User, password: String) {
+
+        auth.createUserWithEmailAndPassword(userN.email!!, password)
+            .addOnSuccessListener { userAuth ->
+                Toast.makeText(applicationContext, "User registered", Toast.LENGTH_SHORT).show()
+                FirebaseDatabase.getInstance().getReference("users").child(userAuth.user?.uid.toString()).setValue(userN).addOnSuccessListener {
+                    this@SignUpActivity.finish()
+                }
+                    .addOnFailureListener {
+                        createBtn.visibility = View.VISIBLE
+                        progressBar.visibility = View.GONE
+                        Toast.makeText(applicationContext, "Error: ${it.message}", Toast.LENGTH_SHORT).show()
+                    }
+
+            }
+            .addOnFailureListener {
+                Toast.makeText(applicationContext, "Error: ${it.message}", Toast.LENGTH_SHORT).show()
+                createBtn.visibility = View.VISIBLE
+                progressBar.visibility = View.GONE
+            }
+
+
+    }
+
+    private fun isValidForm(): Boolean {
+
+        var isValid = true
+
+
+        email.apply {
+            val text = text.toString()
+            if(text.isBlank()){
+                error = "Required"
+                isValid = false
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(text).matches()) {
+                error = "Invalid email"
+                isValid = false
+            }
+
+        }
+
+        password.apply {
+            val text = text.toString()
+            if(text.isBlank()){
+                error = "Required"
+                isValid = false
+            } else if (text.length < 6) {
+                error = "Min 6 characters"
+                isValid = false
+            }
+        }
+
+        name.apply {
+            val text = text.toString()
+            if(text.isBlank()){
+                error = "Required"
+                isValid = false
+            }
+        }
+
+        return isValid
+    }
+
+    /*fun updateUsers() {
         databaseUsers.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 users!!.clear()
@@ -131,7 +234,7 @@ class SignUp : AppCompatActivity(), View.OnClickListener {
                 password.setText("")
                 username.setText("")
                 Toast.makeText(applicationContext, "Account Created", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, PatientUser::class.java)
+                val intent = Intent(this, PatientUserActivity::class.java)
                // intent.putExtra("user", newPatient)
                 startActivity(intent)
             } else {
@@ -159,5 +262,5 @@ class SignUp : AppCompatActivity(), View.OnClickListener {
     companion object {
         private val databaseUsers = FirebaseDatabase.getInstance().getReference("users")
         private val databaseServices = FirebaseDatabase.getInstance().getReference("services")
-    }
+    }*/
 }

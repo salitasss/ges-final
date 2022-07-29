@@ -11,7 +11,16 @@
         android:theme="@style/Theme.Practice">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:theme="@style/Theme.Practice.NoActionBar"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".PatientIntroActivity"
+            android:theme="@style/Theme.Practice.NoActionBar"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SignInActivity"
             android:theme="@style/Theme.Practice.NoActionBar"
             android:exported="true">
             <intent-filter>
@@ -19,6 +28,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/Theme.Practice.NoActionBar"
+            android:exported="true">
         </activity>
     </application>
 
