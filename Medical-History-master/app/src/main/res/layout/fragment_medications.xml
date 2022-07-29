@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E91E5E"
     tools:context=".ui.medications.Medications">
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FAF7F7">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -31,13 +33,13 @@
                         android:layout_height="40dp"
                         android:gravity="right"
                         android:paddingTop="16dp"
-                        android:text="Medication"
+                        android:text="Medicamentos"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="80sp"
                         android:layout_height="wrap_content"
-                        android:text="   Dose"
+                        android:text="   Dosis"
                         android:textSize="14sp" />
 
                     <Space
@@ -50,13 +52,13 @@
                         android:layout_height="40dp"
                         android:gravity="right"
                         android:paddingTop="16dp"
-                        android:text="  Medication"
+                        android:text="  Medicamentos"
                         android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="60sp"
                         android:layout_height="wrap_content"
-                        android:text="  Dose"
+                        android:text="     Dosis"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -70,7 +72,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 1"
+                        android:hint="Medicamento 1"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -106,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 6"
+                        android:hint="Medicamento 6"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -142,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 2"
+                        android:hint="Medicamento 2"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -178,7 +180,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 7"
+                        android:hint="Medicamento 7"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -214,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 3"
+                        android:hint="Medicamento 3"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -250,7 +252,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 8"
+                        android:hint="Medicamento 8"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -286,7 +288,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 4"
+                        android:hint="Medicamento 4"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -322,7 +324,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 9"
+                        android:hint="Medicamento 9"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -332,6 +334,7 @@
                         android:id="@+id/med9_textview"
                         android:layout_width="100sp"
                         android:layout_height="40dp"
+                        android:background="#FBF8F8"
                         android:fontFamily="casual"
                         android:gravity="right|center_vertical"
                         android:textSize="14sp"
@@ -358,7 +361,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication 5"
+                        android:hint="Medicamento 5"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"
@@ -394,7 +397,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:gravity="right"
-                        android:hint="Medication10"
+                        android:hint="Medicamento 10"
                         android:inputType="textUri|textCapWords"
                         android:textSize="14sp"
                         android:textStyle="bold"

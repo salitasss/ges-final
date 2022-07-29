@@ -10,7 +10,8 @@
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#E91E5E">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -36,7 +37,7 @@
                         android:backgroundTint="@color/green"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
-                        android:text="Save Changes" />
+                        android:text="Guardar Cambios" />
                 </TableRow>
 
                 <TableRow>
@@ -45,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:text="Date"
+                        android:text="Fecha"
                         android:textStyle="bold" />
 
                     <EditText
@@ -111,7 +112,7 @@
                         android:layout_column="0"
                         android:layout_marginTop="0dp"
                         android:gravity="right"
-                        android:text="Weight"
+                        android:text="Altura"
                         android:textStyle="bold" />
 
                     <EditText
@@ -176,15 +177,15 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:text="Fast time"
+                        android:text="Tiempo"
                         android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/enter_hours"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="0dp"
-                        android:gravity="end"
                         android:fontFamily="casual"
+                        android:gravity="end"
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLength="2"
@@ -260,7 +261,7 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:text="BG"
+                        android:text="peso"
                         android:textStyle="bold" />
 
                     <EditText
@@ -416,7 +417,7 @@
                         android:layout_span="7"
                         android:layout_weight="1"
                         android:fontFamily="casual"
-                        android:hint="Enter comment"
+                        android:hint="Ingresar comentario"
                         android:inputType="textCapSentences"
                         android:maxLength="40"
                         android:textSize="14dp"
@@ -432,7 +433,7 @@
                         android:backgroundTint="@color/red"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
-                        android:text="Delete Record" />
+                        android:text="Borrar historial" />
                 </TableRow>
             </TableLayout>
         </ScrollView>

@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Practice</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings"> Edit or Delete</string>
+    <string name="app_name">Mi historial Clinico</string>
+    <string name="nav_header_desc">Cara de Navegacion</string>
+    <string name="action_settings"> Editar o Borrar</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_medications">Medications</string>
-    <string name="user_name">User Name</string>
+    <string name="menu_medications">Medicamentos</string>
+    <string name="user_name">Nombre de Usuario</string>
     <string name="dob">DOB 07/15/1955</string>
     <string name="email">user@mail.com</string>
 

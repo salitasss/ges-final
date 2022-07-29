@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EF3171"
     android:orientation="horizontal"
     android:theme="@style/Theme.AppCompat.DayNight.Dialog"
     tools:context=".ui.home.Add">
@@ -10,7 +11,8 @@
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FDFAFA">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -21,20 +23,20 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/nav_header_vertical_spacing"
+                android:layout_gravity="center"
                 android:paddingStart="@dimen/nav_header_vertical_spacing"
-                android:layout_gravity="center">
+                android:paddingEnd="@dimen/nav_header_vertical_spacing">
 
-<!--                <TableRow>-->
+                <!--                <TableRow>-->
 
-<!--                    <Button-->
-<!--                        android:id="@+id/EditButton"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:layout_span="7"-->
-<!--                        android:backgroundTint="@color/colorgreenAccent"-->
-<!--                        android:text="Change Record" />-->
-<!--                </TableRow>-->
+                <!--                    <Button-->
+                <!--                        android:id="@+id/EditButton"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:layout_span="7"-->
+                <!--                        android:backgroundTint="@color/colorgreenAccent"-->
+                <!--                        android:text="Change Record" />-->
+                <!--                </TableRow>-->
 
                 <TableRow>
 
@@ -45,7 +47,7 @@
                         android:layout_span="7"
                         android:layout_weight="1"
                         android:backgroundTint="@color/green"
-                        android:text="Add Record" />
+                        android:text="Agregar Historial Clinico" />
                 </TableRow>
 
                 <TableRow>
@@ -54,7 +56,7 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:text="Date"
+                        android:text="Fecha"
                         android:textStyle="bold" />
 
                     <EditText
@@ -65,8 +67,8 @@
                         android:fontFamily="casual"
                         android:gravity="center"
                         android:inputType="date"
-                        android:textStyle="bold"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/view_med1"
@@ -79,15 +81,15 @@
 
                     <EditText
                         android:id="@+id/enter_med1"
-                        android:layout_height="wrap_content"
                         android:layout_width="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_column="5"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
 
                     <TextView
@@ -101,15 +103,15 @@
 
                     <EditText
                         android:id="@+id/enter_med6"
-                        android:layout_height="wrap_content"
                         android:layout_width="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_column="7"
                         android:fontFamily="casual"
                         android:gravity="center"
                         android:inputType="datetime"
                         android:maxLength="4"
-                        android:textStyle="bold"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
                 </TableRow>
 
@@ -120,7 +122,7 @@
                         android:layout_column="0"
                         android:layout_marginTop="0dp"
                         android:gravity="right"
-                        android:text="Weight"
+                        android:text="Altura"
                         android:textStyle="bold" />
 
                     <EditText
@@ -128,13 +130,13 @@
                         android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:layout_span="3"
-                        android:textStyle="bold"
                         android:fontFamily="casual"
                         android:gravity="center"
                         android:inputType="datetime"
                         android:maxLength="3"
                         android:nextFocusDown="@id/enter_hours"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/view_med2"
@@ -151,10 +153,10 @@
                         android:layout_column="5"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
 
                     <TextView
@@ -172,10 +174,10 @@
                         android:layout_column="7"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
                 </TableRow>
 
@@ -185,8 +187,8 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:textStyle="bold"
-                        android:text="Fast time"/>
+                        android:text="hora de registro"
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/enter_hours"
@@ -194,31 +196,31 @@
                         android:layout_marginEnd="0dp"
                         android:fontFamily="casual"
                         android:gravity="end"
-                        android:textStyle="bold"
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLength="2"
                         android:nextFocusRight="@id/enter_minutes"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/enter_colon"
                         android:layout_column="2"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:text=":"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/enter_minutes"
                         android:layout_column="3"
                         android:fontFamily="casual"
                         android:gravity="start"
-                        android:textStyle="bold"
                         android:inputType="number"
                         android:maxLength="2"
                         android:nextFocusDown="@id/enter_bg"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/view_med3"
@@ -235,10 +237,10 @@
                         android:layout_column="5"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
 
                     <TextView
@@ -256,10 +258,10 @@
                         android:layout_column="7"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
                 </TableRow>
 
@@ -269,8 +271,8 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:textStyle="bold"
-                        android:text="BG"/>
+                        android:text="Peso"
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/enter_bg"
@@ -279,11 +281,11 @@
                         android:layout_span="3"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="number"
                         android:maxLength="3"
                         android:nextFocusDown="@id/enter_systolic"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/view_med4"
@@ -300,10 +302,10 @@
                         android:layout_column="5"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
 
                     <TextView
@@ -334,32 +336,32 @@
                         android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:gravity="right"
-                        android:textStyle="bold"
-                        android:text="BP"/>
+                        android:text="BP"
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/enter_systolic"
-                        android:layout_height="wrap_content"
                         android:layout_width="30dp"
+                        android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:fontFamily="casual"
                         android:gravity="end"
-                        android:textStyle="bold"
                         android:imeOptions="actionNext"
                         android:inputType="number"
                         android:maxLength="3"
                         android:nextFocusRight="@id/enter_diastolic"
                         android:textColorHint="#AFAEAE"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
 
                     <TextView
                         android:id="@+id/enter_slash"
                         android:layout_column="2"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:text="/"
-                        android:textSize="16dp" />
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/enter_diastolic"
@@ -367,11 +369,11 @@
                         android:layout_column="3"
                         android:fontFamily="casual"
                         android:gravity="start"
-                        android:textStyle="bold"
                         android:inputType="number"
                         android:maxLength="3"
                         android:textColorHint="#AFAEAE"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/view_med5"
@@ -388,10 +390,10 @@
                         android:layout_column="5"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
 
                     <TextView
@@ -409,10 +411,10 @@
                         android:layout_column="7"
                         android:fontFamily="casual"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:inputType="datetime"
                         android:maxLength="4"
                         android:textSize="14dp"
+                        android:textStyle="bold"
                         android:visibility="invisible" />
                 </TableRow>
 
@@ -423,23 +425,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_span="7"
-                        android:textStyle="bold"
                         android:layout_weight="1"
                         android:fontFamily="casual"
                         android:hint="Enter comment"
                         android:inputType="textCapSentences"
                         android:maxLength="40"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
                 </TableRow>
 
                 <!--                <TableRow>-->
-<!--                    <Button-->
-<!--                        android:id="@+id/DeleteButton"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:layout_span="7"-->
-<!--                        android:backgroundTint="@color/colorRed"-->
-<!--                        android:text="Delete" />-->
-<!--                </TableRow>-->
+                <!--                    <Button-->
+                <!--                        android:id="@+id/DeleteButton"-->
+                <!--                        android:layout_weight="1"-->
+                <!--                        android:layout_span="7"-->
+                <!--                        android:backgroundTint="@color/colorRed"-->
+                <!--                        android:text="Delete" />-->
+                <!--                </TableRow>-->
 
             </TableLayout>
         </ScrollView>

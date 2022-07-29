@@ -10,6 +10,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#B13B60"
         android:orientation="vertical">
 
         <LinearLayout
@@ -21,15 +22,15 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#E91E5E" />
+                android:background="#DC2F6A" />
 
             <TextView
                 android:id="@+id/configProfile"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:gravity="center"
-                android:text="Welcome Patient"
-                android:textColor="@android:color/black"
+                android:text="BIENVENIDO"
+                android:textColor="@android:color/white"
                 android:textSize="26sp"
                 app:fontFamily="sans-serif-smallcaps" />
 
@@ -48,8 +49,8 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="124dp"
-                    android:layout_height="124dp"
+                    android:layout_width="256dp"
+                    android:layout_height="256dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -61,8 +62,11 @@
                 android:id="@+id/welcomeText"
                 android:layout_width="match_parent"
                 android:layout_height="72dp"
+                android:textColor="@color/white"
+                android:background="#D54576"
+                android:backgroundTint="#E12263"
                 android:gravity="center"
-                android:text="Welcome ____, you are logged in as patient."></TextView>
+                android:text="BIENVENIDO A NUESTRO APLICATIVO, USTED AH SIDO REGISTRADO CORRECTAMENTE"></TextView>
 
         </LinearLayout>
 
@@ -72,16 +76,22 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="58dp" />
 
         <Button
             android:id="@+id/getStartedButton"
             android:layout_width="216dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="#9E737B"
-            android:text="Get Started"
-            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            android:background="#E91E63"
+            android:backgroundTint="@color/green"
+            android:drawableTint="#E91E63"
+            android:text="ENTRAR AL APLICATIVO"
+            android:textColor="@color/white"
+            android:textColorHighlight="#4CAF50"
+            android:textColorHint="#4CAF50"
+            android:textColorLink="#4CAF50"
+             />
 
         <Space
             android:layout_width="match_parent"

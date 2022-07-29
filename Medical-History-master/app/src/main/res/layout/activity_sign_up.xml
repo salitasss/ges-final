@@ -11,6 +11,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#E91E5E"
         android:orientation="vertical">
 
         <LinearLayout
@@ -22,14 +23,16 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:background="#E91E5E" />
 
             <TextView
                 android:id="@+id/configProfile"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
+                android:background="#FB3679"
                 android:gravity="center"
-                android:text="create an account"
+                android:text="REGISTRE SU CUENTA"
                 android:textColor="#000000"
                 android:textSize="26sp"
                 app:fontFamily="sans-serif-smallcaps" />
@@ -43,10 +46,16 @@
                 android:layout_width="268dp"
                 android:layout_height="47dp"
                 android:layout_gravity="center"
+                android:background="#EF3171"
                 android:ems="10"
-                android:hint="(Please enter a name)"
+                android:hint="   Ingrese su nombre"
                 android:inputType="textPersonName"
-                android:singleLine="true" />
+                android:singleLine="true"
+
+
+                android:textColorHighlight="#F3EFF0"
+                android:textColorHint="#F3EFF0"
+                android:textColorLink="#F3EFF0" />
 
             <TextView
                 android:id="@+id/teamNameTextView"
@@ -54,14 +63,15 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="Name"
+                android:text="Nombre"
                 android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="307dp"
             android:layout_weight="0.7"
+            android:background="#E91E5E"
             android:orientation="vertical">
 
             <Space
@@ -73,10 +83,14 @@
                 android:layout_width="264dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:background="#EF3171"
                 android:ems="10"
+                android:hint="   Ingrese su correo"
                 android:inputType="textEmailAddress"
-                android:hint="(Please enter a email)"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#F3EFF0"
+                android:textColorHint="#F3EFF0" />
 
             <TextView
                 android:id="@+id/emailTextField"
@@ -96,11 +110,16 @@
                 android:layout_width="264dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:background="#EF3171"
                 android:ems="10"
+                android:hint="   Ingrese su contraseña"
                 android:imeOptions="actionDone"
-                android:hint="(Please enter a password)"
                 android:inputType="textPassword"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="#FBF4F4"
+                android:textColorHighlight="#F3EFF0"
+                android:textColorHint="#F3EFF0"
+                android:textColorLink="#F3EFF0" />
 
             <TextView
                 android:id="@+id/passwordText"
@@ -109,7 +128,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
-                android:text="Password"
+                android:text="Contraseña"
                 android:textColor="#000000" />
 
             <Space
@@ -118,7 +137,8 @@
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="59dp"
+                android:background="#E91E5E">
 
                 <RadioButton
                     android:id="@+id/PatientRB"
@@ -128,19 +148,13 @@
                     android:checked="true"
                     android:fontFamily="sans-serif"
                     android:gravity="center"
-                    android:text="Patient"
+                    android:text="Usuario clinGot"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#E91E63"
+                    android:textColorHint="#E91E63"
+                    android:textColorLink="#E91E63"
                     android:textSize="18sp"
                     android:typeface="sans" />
-
-                <RadioButton
-                    android:id="@+id/EmployeeRB"
-                    android:layout_width="173dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="sans-serif"
-                    android:gravity="center"
-                    android:text="Employee"
-                    android:textSize="18sp" />
 
             </RadioGroup>
 
@@ -163,8 +177,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="#4CAF59"
-            android:text="Create"
-            android:textColor="@color/common_google_signin_btn_text_dark_pressed" />
+            android:text="CREAR CUENTA"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textColorHighlight="#4CAF50"
+            android:textColorHint="#4CAF50"
+            android:textColorLink="#4CAF50" />
 
         <Space
             android:layout_width="match_parent"
@@ -176,11 +193,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="#DAC8C8"
+            android:clickable="true"
             android:gravity="center"
             android:minHeight="48dp"
             android:padding="16dp"
-            android:text="I already have an account"
-            android:clickable="true" />
+            android:text="ya tengo una cuenta registrada" />
 
         <Space
             android:layout_width="match_parent"

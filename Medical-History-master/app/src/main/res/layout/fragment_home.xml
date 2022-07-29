@@ -12,15 +12,17 @@
     </data>
 
     <FrameLayout
+        android:id="@+id/homeFragment"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/homeFragment"
+        android:background="#E91E5E"
         tools:context=".ui.home.HomeFragment">
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#F6F0F0">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -41,7 +43,7 @@
                         android:background="@drawable/brown_border"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="Date" />
+                        android:text="Fecha" />
 
                     <TextView
                         android:id="@+id/headerTV_weight"
@@ -50,7 +52,7 @@
                         android:background="@drawable/brown_border"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="Wt" />
+                        android:text="Altura" />
 
                     <TextView
                         android:id="@+id/headerTV_fast"
@@ -59,7 +61,7 @@
                         android:background="@drawable/brown_border"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="Fast" />
+                        android:text="Hora registro" />
 
                     <TextView
                         android:id="@+id/headerTV_bg"
@@ -68,7 +70,7 @@
                         android:background="@drawable/brown_border"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text="BG" />
+                        android:text="Peso" />
 
                     <TextView
                         android:id="@+id/headerTV_bp"
@@ -77,7 +79,7 @@
                         android:background="@drawable/brown_border"
                         android:gravity="center"
                         android:maxLines="1"
-                        android:text=" BP"/>
+                        android:text=" BP" />
 
                     <TextView
                         android:id="@+id/headerTV_med1"
@@ -87,127 +89,127 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:gravity="center"
-                        android:visibility="gone"
                         android:maxLines="1"
                         android:paddingStart="4dp"
-                        android:paddingEnd="4dp"/>
+                        android:paddingEnd="4dp"
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med2"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med3"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med4"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med5"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med6"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med7"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med8"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med9"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_med10"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:maxLines="1"
                         android:paddingStart="4dp"
                         android:paddingEnd="4dp"
-                        android:visibility="gone"
-                        android:focusable="true"
-                        android:clickable="true" />
+                        android:visibility="gone" />
 
                     <TextView
                         android:id="@+id/headerTV_comment"
@@ -215,7 +217,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/brown_border"
                         android:maxLines="1"
-                        android:text="  Comment"/>
+                        android:text="Comentarios" />
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -224,7 +226,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:scrollbars="none"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
             </LinearLayout>
         </HorizontalScrollView>
 

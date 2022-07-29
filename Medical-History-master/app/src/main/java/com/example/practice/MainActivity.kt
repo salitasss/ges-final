@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                     dialog.dismiss()
                 }
 
-                setTitle("Do you want to log out?")
+                setTitle("¿Seguro de cerrar sesion?")
             }
             builder.create()
         }

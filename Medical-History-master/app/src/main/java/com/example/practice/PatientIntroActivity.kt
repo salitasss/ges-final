@@ -49,7 +49,7 @@ class PatientIntroActivity : AppCompatActivity() {
         //activeUser = i.getSerializableExtra("user") as Patient?
         welcome = binding.welcomeText
         val email = FirebaseAuth.getInstance().currentUser?.email!!
-        welcome.text = "Welcome " + email + " you are logged in as patient."
+        welcome.text = "Bienvenido " + email + " usted se ah registrado en nuestro aplicativo exitosamente"
     }
 
     /*fun openActivity(activity: Class<*>?) {
